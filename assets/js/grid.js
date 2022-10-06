@@ -26,6 +26,7 @@ const accessView = (photos) => {
 
     for (const iterator of photos) {
         iterator.addEventListener('click', (item) => {
+            // console.log(iterator.childNodes[1].src)
             let imgPath = item.composedPath()
             openView(imgPath[0].id)
         })

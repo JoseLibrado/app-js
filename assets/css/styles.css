@@ -7,6 +7,10 @@ li {
 span {
     font-weight: 100;
 }
+img {
+    width: 100%;
+    height: 100%;
+}
 button {
     width: 100%;
 }
@@ -16,7 +20,7 @@ button {
     font-size: xx-large;
 }
 .aspect-cell {
-    width: 300px;
+    width: 50%;
     /* height: 500px; */
     margin: 0 auto;
     border: solid 7px rgb(97, 97, 97);;
@@ -25,16 +29,17 @@ button {
 .cell {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-evenly;
 }
 .photo {
     background-color: #eee;
-    flex-basis: calc(50%);    
+    /* flex-basis: calc(50%);     */
     animation: vage 3s;
     position: relative;
 }
 .photo:hover::after {
     background-color: rgba(29, 29, 29, 0.733);
-    content: 'push it!';
+    content: 'push over!';
     text-align: center;
     vertical-align: center;
     color: #eee;
@@ -44,7 +49,7 @@ button {
     right: 0;
     bottom: 0;
     position: absolute;
-    width: 98%;
+    /* width: 1%; */
 }
 .view-class {
     width: 100%;
@@ -77,4 +82,16 @@ button {
     to {
         opacity: 1;
     }   
+}
+
+
+@media(max-width: 769px){
+    .aspect-cell  {
+        width: 55%;
+    }
+}
+@media(max-width: 600px){
+    .aspect-cell  {
+        width: 98%;
+    }
 }
